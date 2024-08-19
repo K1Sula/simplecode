@@ -14,4 +14,21 @@
     }
     delete [] arr; // here also for delete
 
+    // dualarray dinamical
+    int rows,column;
+    cin >> rows >> column;
+    int **arr2 = new int*[rows]; // we create dualarray in enterens rows
+
+    for (int i = 0; i < rows; i++) {
+        arr2[i] = new int[column]; // we create array in dualarray
+    }
+
+    for (int i = 0; i < rows; i++) {
+        delete [] arr2[i];
+    }
+
+    delete [] arr2 ;
+
+
+
  }
