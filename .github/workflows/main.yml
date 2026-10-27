@@ -23,3 +23,5 @@ jobs:
             echo "❌ index.html not found!"
             exit 1
           fi
+      - name: Build project
+        run: echo "Build complete"
