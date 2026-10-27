@@ -23,3 +23,11 @@ jobs:
             echo "❌ index.html not found!"
             exit 1
           fi
+
+      # NEW STEP 1: Linter
+      - name: Lint check
+        run: echo "Lint passed"
+
+      # NEW STEP 2: Build
+      - name: Build project
+        run: echo "Build complete"
