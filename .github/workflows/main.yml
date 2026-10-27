@@ -24,5 +24,11 @@ jobs:
             exit 1
           fi
 
+<<<<<<< HEAD
       - name: Lint check
         run: echo "Lint passed"
+=======
+
+                - name: Check README
+        run: grep "project" README.md
+>>>>>>> ee532e5 (new)
