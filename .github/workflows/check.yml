@@ -1,0 +1,17 @@
+name: Real Project Check
+on: [push]
+jobs:
+  verify-code:
+    runs-on: ubuntu-latest
+    steps:
+      # Шаг 1: Ключевой шаг реального CI. Скачивает твой код на виртуальный сервер.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Шаг 2: Показывает все скачанные файлы и проверяет наличие твоего кода
+      - name: Verify files exist
+        run: |
+          echo "Содержимое виртуальной машины:"
+          ls -la
+          echo "Проверяем исходники..."
+          test -f 1.py && echo "Успех: Файл 1.py на месте!" || echo "Внимание: Файл 1.py не найден."
